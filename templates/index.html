@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RemoteOK Scraper Validator</title>
+    <style>
+        table { border-collapse: collapse; width: 80%; margin: 20px auto; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .failed { color: red; }
+        h1 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>RemoteOK Job Scraper Validator</h1>
+    <h2>Passed Jobs ({{ passed|length }})</h2>
+    <table>
+        <tr><th>Title</th><th>Company</th><th>Category</th></tr>
+        {% for job in passed %}
+        <tr><td>{{ job.title }}</td><td>{{ job.company }}</td><td>{{ job.category }}</td></tr>
+        {% endfor %}
+    </table>
+    <h2>Failed Jobs ({{ failed|length }})</h2>
+    <table>
+        <tr><th>Title</th><th>Company</th><th>Category</th><th>Issues</th></tr>
+        {% for item in failed %}
+        <tr class="failed"><td>{{ item.job.title }}</td><td>{{ item.job.company }}</td><td>{{ item.job.category }}</td><td>{{ item.issues|join(', ') }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
