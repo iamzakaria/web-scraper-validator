@@ -1,7 +1,7 @@
 # RemoteOK Scraper Validator
 
 ## Summary
-A Python-based SQA tool that scrapes remote developer and QA jobs from RemoteOK, validates their quality, and displays results in a Flask dashboard. Logs data to SQLite, includes pytest tests, and showcases automation—perfect for QA engineers flexing their coding chops.
+A Python-based SQA tool that scrapes remote developer and QA jobs from RemoteOK, validates their quality, and displays results in a Flask dashboard. Logs data to SQLite, includes pytest tests, and showcases automation—perfect for QA engineers.
 
 ## Overview
 This project automates scraping job listings from `remoteok.com/remote-dev-jobs` (dev roles) and `remoteok.com/qa-jobs` (QA roles), checks for missing titles or companies, and serves the results in a clean web UI. It’s built with a modular design—scraper, validator, database, and dashboard—plus unit tests to ensure reliability. Ideal for SQA portfolios, it demonstrates web scraping, data validation, and reporting skills.
